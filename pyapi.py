@@ -27,6 +27,12 @@ def home():
 def addAction():
     input = request.get_json()
 
+    # Check if required fields are present
+    # In real world we'd also check the actual data that is input to ensure
+    # the integrety and safeness of data
+    if not (('action' in input) or ('time' in input)):
+        return jsonify({"message": "Missing required fields(action|time)"}), 400
+
     #Retrieve from our service
     DBService.upsert(input)
     data = DBService.getAll()

@@ -11,7 +11,6 @@
 Build and run PyAPI container:
 
 ```
-cd docker
 docker build -t test:pyapi pyapi
 ```
 

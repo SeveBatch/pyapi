@@ -121,7 +121,7 @@
 						"id": "4f1f0193-99fa-4f20-84b6-53796a4e3e7d",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"  pm.response.to.have.status(200);",
+							"  pm.response.to.have.status(400);",
 							"});"
 						],
 						"type": "text/javascript"
